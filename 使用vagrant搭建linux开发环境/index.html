@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="操作环境 win 10 64  软件安装 vagrant https://www.vagrantup.com/downloads.html virtualbox https://www.virtualbox.org/wiki/Downloads box http://www.vagrantbox.es/ 官方镜像 https://app.vagrantup.com/boxes/search?pro">
+<meta name="description" content="操作环境 win 10 64  vagrant -v  Vagrant 2.1.4 virtualbox 5.2.18  软件安装 vagrant https://www.vagrantup.com/downloads.html virtualbox https://www.virtualbox.org/wiki/Downloads box http://www.vagrantbox.es/ 官方">
 <meta name="keywords" content="other">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用vagrant搭建linux开发环境">
 <meta property="og:url" content="https://diaoyongbao.github.io/使用vagrant搭建linux开发环境/index.html">
 <meta property="og:site_name" content="Dyb&#39;s BLOG">
-<meta property="og:description" content="操作环境 win 10 64  软件安装 vagrant https://www.vagrantup.com/downloads.html virtualbox https://www.virtualbox.org/wiki/Downloads box http://www.vagrantbox.es/ 官方镜像 https://app.vagrantup.com/boxes/search?pro">
+<meta property="og:description" content="操作环境 win 10 64  vagrant -v  Vagrant 2.1.4 virtualbox 5.2.18  软件安装 vagrant https://www.vagrantup.com/downloads.html virtualbox https://www.virtualbox.org/wiki/Downloads box http://www.vagrantbox.es/ 官方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-09T03:11:08.963Z">
+<meta property="og:updated_time" content="2018-09-09T03:17:50.360Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用vagrant搭建linux开发环境">
-<meta name="twitter:description" content="操作环境 win 10 64  软件安装 vagrant https://www.vagrantup.com/downloads.html virtualbox https://www.virtualbox.org/wiki/Downloads box http://www.vagrantbox.es/ 官方镜像 https://app.vagrantup.com/boxes/search?pro">
+<meta name="twitter:description" content="操作环境 win 10 64  vagrant -v  Vagrant 2.1.4 virtualbox 5.2.18  软件安装 vagrant https://www.vagrantup.com/downloads.html virtualbox https://www.virtualbox.org/wiki/Downloads box http://www.vagrantbox.es/ 官方">
 
 
 
@@ -374,7 +374,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  725字
+                  735字
                 </span>
               
 
@@ -412,13 +412,16 @@
 
       
         <h2 id="操作环境"><a href="#操作环境" class="headerlink" title="操作环境"></a>操作环境</h2><blockquote>
-<p>win 10 64</p>
+<p>win 10 64 </p>
+<p>vagrant -v  Vagrant 2.1.4</p>
+<p>virtualbox 5.2.18</p>
 </blockquote>
 <h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><ul>
 <li>vagrant <a href="https://www.vagrantup.com/downloads.html" target="_blank" rel="noopener">https://www.vagrantup.com/downloads.html</a></li>
 <li>virtualbox <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener">https://www.virtualbox.org/wiki/Downloads</a></li>
 <li>box <a href="http://www.vagrantbox.es/" target="_blank" rel="noopener">http://www.vagrantbox.es/</a></li>
-<li>官方镜像 <a href="https://app.vagrantup.com/boxes/search?provider=virtualbox" target="_blank" rel="noopener">https://app.vagrantup.com/boxes/search?provider=virtualbox</a><h2 id="使用及常用命令"><a href="#使用及常用命令" class="headerlink" title="使用及常用命令"></a>使用及常用命令</h2></li>
+<li>官方镜像 <a href="https://app.vagrantup.com/boxes/search?provider=virtualbox" target="_blank" rel="noopener">https://app.vagrantup.com/boxes/search?provider=virtualbox</a><a id="more"></a>
+<h2 id="使用及常用命令"><a href="#使用及常用命令" class="headerlink" title="使用及常用命令"></a>使用及常用命令</h2></li>
 <li><p>添加box文件</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vagrant box add centos7 D:/Linux/centos-7.0-x86_64.box</span><br><span class="line">==&gt; box: Box file was not detected as metadata. Adding it directly...</span><br><span class="line">==&gt; box: Adding box &apos;centos7&apos; (v0) for provider:</span><br><span class="line">	box: Unpacking necessary files from: file:///D:/Linux/centos-7.0-x86_64.box</span><br><span class="line">	box: Progress: 100% (Rate: 654M/s, Estimated time remaining: --:--:--)</span><br><span class="line">==&gt; box: Successfully added box &apos;centos7&apos; (v0) for &apos;virtualbox&apos;!</span><br></pre></td></tr></table></figure>
 </li>
@@ -512,8 +515,8 @@
 </ul>
 </li>
 <li><p>网络配置</p>
-<p>  设置静态ip失败，后使用的dhcp成功<br>~ config.vm.network “private_network”, type:”dhcp” ~</p>
-</li>
+<p>  设置静态ip失败，后使用的dhcp成功</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">config.vm.network &quot;private_network&quot;, type:&quot;dhcp&quot;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
