@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="Dyb&#39;s BLOG">
 <meta property="og:description" content="Docker介绍 Docker 使用Google公司推出的Go语言进行开发基于 Linux 内核的cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-23T13:12:45.282Z">
+<meta property="og:updated_time" content="2018-12-23T13:24:50.405Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker在ubuntu和centos的安装">
 <meta name="twitter:description" content="Docker介绍 Docker 使用Google公司推出的Go语言进行开发基于 Linux 内核的cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。">
@@ -351,7 +351,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  742字
+                  749字
                 </span>
               
 
@@ -409,14 +409,12 @@
 <li><p>安装docker-ce<br><code>apt-get install docker-ce</code></p>
 </li>
 <li><p>启动docker查看版本号</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl start </span><br><span class="line">dockerdocker version</span><br><span class="line"># docker versionClient: Version:           18.09.0 </span><br><span class="line">API version:       1.39 </span><br><span class="line">Go version:        go1.10.4</span><br><span class="line">Git commit:        4d60db4 </span><br><span class="line">Built:             Wed Nov  7 00:48:57 2018 </span><br><span class="line">OS/Arch:           linux/amd64 </span><br><span class="line">Experimental:      false </span><br><span class="line">Server: Docker Engine - Community </span><br><span class="line">Engine:  Version:          18.09.0  </span><br><span class="line">API version:      1.39 (minimum version 1.12)  </span><br><span class="line">Go version:       go1.10.4  </span><br><span class="line">Git commit:       4d60db4  Built:            Wed Nov  7 00:16:44 2018  OS/Arch:          linux/amd64  </span><br><span class="line">Experimental:     false</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl start </span><br><span class="line">dockerdocker version</span><br><span class="line"># docker versionClient: Version:           18.09.0 </span><br><span class="line">API version:       1.39 </span><br><span class="line">Go version:        go1.10.4</span><br><span class="line">Git commit:        4d60db4 </span><br><span class="line">Built:             Wed Nov  7 00:48:57 2018 </span><br><span class="line">OS/Arch:           linux/amd64 </span><br><span class="line">Experimental:      false </span><br><span class="line">Server: Docker Engine - Community </span><br><span class="line">Engine:  Version:          18.09.0  </span><br><span class="line">API version:      1.39 (minimum version 1.12)  </span><br><span class="line">Go version:       go1.10.4  </span><br><span class="line">Git commit:       4d60db4  </span><br><span class="line">Built:            Wed Nov  7 00:16:44 2018  </span><br><span class="line">OS/Arch:          linux/amd64  </span><br><span class="line">Experimental:     false</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h3 id="Docker在centos下的安装"><a href="#Docker在centos下的安装" class="headerlink" title="Docker在centos下的安装"></a>Docker在centos下的安装</h3><ol>
-<li><p>系统版本</p>
-</li>
-<li><p>在<a href="https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/3" target="_blank" rel="noopener">清华大学开源镜像站</a>中找最新的docker安装镜像</p>
-</li>
+<li>系统版本<br><code>CentOS Linux release 7.5.1804 (Core)</code></li>
+<li>在<a href="https://mirrors.tuna.tsinghua.edu.cn" target="_blank" rel="noopener">清华大学开源镜像站</a>中找最新的docker安装镜像</li>
 <li>复制docker-ce.repo文件<br><code>wget https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo</code></li>
 <li>编辑docker.repo文件<br><code>:%s@https://download.docker.com@https://mirrors.tuna.tsinghua.edu.cn/docker-ce@</code></li>
 <li>查看是否可用<br><code>yum repolist</code></li>
