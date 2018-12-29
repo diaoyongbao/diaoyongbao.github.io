@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Docker," />
+  <meta name="keywords" content="zabbix," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="Docker介绍 Docker 使用Google公司推出的Go语言进行开发基于 Linux 内核的cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。">
-<meta name="keywords" content="Docker">
+<meta name="description" content="搭建私有yum仓库    由于目前工作使用的是内网环境，之前的镜像源版本较低，所以萌生了搭建本地的yum镜像仓库，并使用此仓库搭建LAMP环境。  仓库服务器环境 # cat /etc/redhat-releaseCentOS release 6.7 (Final)# ip:172.17.0.3# 待安装软件版本#  mysql -Vmysql  Ver 14.14 Distrib 5.6.42,">
+<meta name="keywords" content="zabbix">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker在ubuntu和centos的安装">
-<meta property="og:url" content="https://diaoyongbao.github.io/Docker在ubuntu和centos的安装/index.html">
+<meta property="og:title" content="使用内网yum仓库搭建zabbix">
+<meta property="og:url" content="https://diaoyongbao.github.io/使用内网yum仓库搭建zabbix/index.html">
 <meta property="og:site_name" content="Dyb&#39;s BLOG">
-<meta property="og:description" content="Docker介绍 Docker 使用Google公司推出的Go语言进行开发基于 Linux 内核的cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。">
+<meta property="og:description" content="搭建私有yum仓库    由于目前工作使用的是内网环境，之前的镜像源版本较低，所以萌生了搭建本地的yum镜像仓库，并使用此仓库搭建LAMP环境。  仓库服务器环境 # cat /etc/redhat-releaseCentOS release 6.7 (Final)# ip:172.17.0.3# 待安装软件版本#  mysql -Vmysql  Ver 14.14 Distrib 5.6.42,">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-23T13:29:34.253Z">
+<meta property="og:updated_time" content="2018-12-29T13:38:31.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker在ubuntu和centos的安装">
-<meta name="twitter:description" content="Docker介绍 Docker 使用Google公司推出的Go语言进行开发基于 Linux 内核的cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。">
+<meta name="twitter:title" content="使用内网yum仓库搭建zabbix">
+<meta name="twitter:description" content="搭建私有yum仓库    由于目前工作使用的是内网环境，之前的镜像源版本较低，所以萌生了搭建本地的yum镜像仓库，并使用此仓库搭建LAMP环境。  仓库服务器环境 # cat /etc/redhat-releaseCentOS release 6.7 (Final)# ip:172.17.0.3# 待安装软件版本#  mysql -Vmysql  Ver 14.14 Distrib 5.6.42,">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://diaoyongbao.github.io/Docker在ubuntu和centos的安装/"/>
+  <link rel="canonical" href="https://diaoyongbao.github.io/使用内网yum仓库搭建zabbix/"/>
 
 
 
 
 
-  <title>Docker在ubuntu和centos的安装 | Dyb's BLOG</title>
+  <title>使用内网yum仓库搭建zabbix | Dyb's BLOG</title>
   
 
 
@@ -280,7 +280,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://diaoyongbao.github.io/Docker在ubuntu和centos的安装/">
+    <link itemprop="mainEntityOfPage" href="https://diaoyongbao.github.io/使用内网yum仓库搭建zabbix/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="dyb">
@@ -297,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Docker在ubuntu和centos的安装</h1>
+          <h1 class="post-title" itemprop="name headline">使用内网yum仓库搭建zabbix</h1>
         
 
         <div class="post-meta">
@@ -309,8 +309,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-23T21:04:57+08:00">
-                2018-12-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-29T21:37:31+08:00">
+                2018-12-29
               </time>
             
 
@@ -320,6 +320,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/2018/" itemprop="url" rel="index">
+                    <span itemprop="name">2018</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -327,7 +349,7 @@
 
           
           
-             <span id="/Docker在ubuntu和centos的安装/" class="leancloud_visitors" data-flag-title="Docker在ubuntu和centos的安装">
+             <span id="/使用内网yum仓库搭建zabbix/" class="leancloud_visitors" data-flag-title="使用内网yum仓库搭建zabbix">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -352,7 +374,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  749字
+                  777字
                 </span>
               
 
@@ -368,7 +390,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3分钟
+                  4分钟
                 </span>
               
             </div>
@@ -389,79 +411,16 @@
       
 
       
-        <h2 id="Docker介绍"><a href="#Docker介绍" class="headerlink" title="Docker介绍"></a>Docker介绍</h2><blockquote>
-<p>Docker 使用Google公司推出的Go语言进行开发基于 Linux 内核的cgroup，namespace，以及 AUFS 类的 Union FS 等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。</p>
+        <h3 id="搭建私有yum仓库"><a href="#搭建私有yum仓库" class="headerlink" title="搭建私有yum仓库"></a>搭建私有yum仓库</h3><blockquote>
+<p>   由于目前工作使用的是内网环境，之前的镜像源版本较低，所以萌生了搭建本地的yum镜像仓库，并使用此仓库搭建LAMP环境。</p>
 </blockquote>
+<h4 id="仓库服务器环境"><a href="#仓库服务器环境" class="headerlink" title="仓库服务器环境"></a>仓库服务器环境</h4> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># cat /etc/redhat-release</span><br><span class="line">CentOS release 6.7 (Final)</span><br><span class="line"># ip:172.17.0.3</span><br><span class="line"># 待安装软件版本</span><br><span class="line">#  mysql -V</span><br><span class="line">mysql  Ver 14.14 Distrib 5.6.42, for Linux (x86_64) using  EditLine wrapper</span><br><span class="line"># httpd -v</span><br><span class="line">Apache/2.2.15 (Unix)</span><br><span class="line"># php -version</span><br><span class="line">PHP 5.6.38 (cli) (built: Sep 15 2018 09:50:52) </span><br><span class="line"># zabbix_server -V  </span><br><span class="line">zabbix_server (Zabbix) 3.4.15</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h3 id="Docker组件说明"><a href="#Docker组件说明" class="headerlink" title="Docker组件说明"></a>Docker组件说明</h3><p><strong>LXC</strong><br>Linux容器技术，共享内核，容器共享宿主机资源，使用namespace和cgroups对资源限制与隔离。<br><strong>Cgroups（control groups）</strong><br>Linux内核提供的一种限制单进程或者多进程资源的机制；比如CPU、内存等资源的使用限制。<br><strong>NameSpace</strong><br>命名空间，也称名字空间，Linux内核提供的一种限制单进程或者多进程资源隔离机制；一个进程可以属于多个命名空间。Linux内核提供了六种NameSpace：UTS、IPC、PID、Network、Mount和User。<br><strong>AUFS（advanced multi layered unification filesystem）</strong><br>高级多层统一文件系统，是UFS的一种，每个branch可以指定readonly（ro只读）、readwrite（读写）和whiteout-able（wo隐藏）权限；一般情况下，aufs只有最上层的branch才有读写权限，其他branch均为只读权限。<br><strong>UFS（UnionFS）</strong><br>联合文件系统，支持将不同位置的目录挂载到同一虚拟文件系统，形成一种分层的模型；成员目录称为虚拟文件系统的一个分支（branch）。</p>
-<h3 id="Docker在ubuntu下的安装"><a href="#Docker在ubuntu下的安装" class="headerlink" title="Docker在ubuntu下的安装"></a>Docker在ubuntu下的安装</h3><ol>
-<li>系统版本<br>ubuntu 16.04<br>docker版本 默认最新<ol>
-<li>安装docker的aufs存储驱动程序<br><code>apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual</code></li>
-<li>安装系统包<br><code>apt-get install apt-transport-https ca-certificates curl software-properties-common</code></li>
-<li>添加docker官方GPG密钥<br><code>curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</code></li>
-</ol>
-</li>
-<li><p>设置stable稳定的仓库</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \&gt; $(lsb_release -cs) \&gt; stable&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看仓库<br><code>cat sources.list | grep docker</code></p>
-</li>
-<li>更新apt包<br><code>apt-get update</code></li>
-<li><p>安装docker-ce<br><code>apt-get install docker-ce</code></p>
-</li>
-<li><p>启动docker查看版本号</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl start </span><br><span class="line">dockerdocker version</span><br><span class="line"># docker versionClient: Version:           18.09.0 </span><br><span class="line">API version:       1.39 </span><br><span class="line">Go version:        go1.10.4</span><br><span class="line">Git commit:        4d60db4 </span><br><span class="line">Built:             Wed Nov  7 00:48:57 2018 </span><br><span class="line">OS/Arch:           linux/amd64 </span><br><span class="line">Experimental:      false </span><br><span class="line">Server: Docker Engine - Community </span><br><span class="line">Engine:  Version:          18.09.0  </span><br><span class="line">API version:      1.39 (minimum version 1.12)  </span><br><span class="line">Go version:       go1.10.4  </span><br><span class="line">Git commit:       4d60db4  </span><br><span class="line">Built:            Wed Nov  7 00:16:44 2018  </span><br><span class="line">OS/Arch:          linux/amd64  </span><br><span class="line">Experimental:     false</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="Docker在centos下的安装"><a href="#Docker在centos下的安装" class="headerlink" title="Docker在centos下的安装"></a>Docker在centos下的安装</h3><ol>
-<li>系统版本<br><code>CentOS Linux release 7.5.1804 (Core)</code></li>
-<li>在<a href="https://mirrors.tuna.tsinghua.edu.cn" target="_blank" rel="noopener">清华大学开源镜像站</a>中找最新的docker安装镜像</li>
-<li>复制docker-ce.repo文件<br><code>wget https://mirrors.tuna.tsinghua.edu.cn/docker-ce/linux/centos/docker-ce.repo</code></li>
-<li>编辑docker.repo文件<br><code>:%s@https://download.docker.com@https://mirrors.tuna.tsinghua.edu.cn/docker-ce@</code></li>
-<li>查看是否可用<br><code>yum repolist</code></li>
-<li>安装并查看版本号<br><code>yum install docker-ce -y</code><br><code>systemctl start docker</code><br><code>docker version</code></li>
-</ol>
-<h2 id="Docker-安装环境说明"><a href="#Docker-安装环境说明" class="headerlink" title="Docker 安装环境说明"></a>Docker 安装环境说明</h2><ul>
-<li>依赖的基础环境<ul>
-<li>64 bit cpu</li>
-<li>Linux Kernel 3.10+</li>
-<li>Linux Kernel cgroups and namespaces</li>
-</ul>
-</li>
-<li>Centos 7<ul>
-<li>“Extras “ repository</li>
-</ul>
-</li>
-<li>Docker Daemon<ul>
-<li>systemctl start docker.service</li>
-</ul>
-</li>
-<li>Docker client <ul>
-<li>docker [OPTIONS] COMMAND [arg..]</li>
-</ul>
-</li>
-<li>Docker 程序环境<ul>
-<li>环境配置文件<ul>
-<li>/etc/sysconfig/docker-network</li>
-<li>/etc/sysconfig/docker-storage</li>
-<li>/etc/sysconfig/docker</li>
-</ul>
-</li>
-<li>Unit File<ul>
-<li>/usr/lib/systemd/system/docker.service</li>
-</ul>
-</li>
-<li>Docker Registry 配置文件<ul>
-<li>/etc/containers/registries.conf</li>
-</ul>
-</li>
-<li>Docker镜像加速<ul>
-<li>在daemon.json 加入<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h4 id="下载软件及其依赖包"><a href="#下载软件及其依赖包" class="headerlink" title="下载软件及其依赖包"></a>下载软件及其依赖包</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install yum-plugin-downloadonly </span><br><span class="line"># 下载php 5.6 版本及组件</span><br><span class="line">yum install --downloadonly --downloaddir=/opt/localyum/ httpd php56w php56w-gd php56w-mysqlnd php56w-bcmath php56w-mbstring php56w-xml php56w-ldap</span><br><span class="line"># 添加mysql 源</span><br><span class="line">wget http://repo.mysql.com/mysql-community-release-el6-5.noarch.rpm</span><br><span class="line">rpm -ivh mysql-community-release-el6-5.noarch.rpm</span><br><span class="line"># 下载mysql-server</span><br><span class="line">yum install --downloadonly --downloaddir=/opt/localyum/ mysql-community-server</span><br><span class="line"># 添加zabbix 的repo</span><br><span class="line">rpm -i http://repo.zabbix.com/zabbix/3.4/rhel/7/x86_64/zabbix-release-3.4-2.el7.noarch.rpm </span><br><span class="line"># 下载zabbix </span><br><span class="line">yum install --downloadonly --downloaddir=/opt/localyum zabbix zabbix-agent zabbix-get zabbix-sender zabbix-server zabbix-server-mysql zabbix-web zabbix-web-mysql</span><br><span class="line"></span><br><span class="line"># /opt/mypackages 作为本地仓库</span><br><span class="line">yum install createrepo</span><br><span class="line">createrepo /opt/localyum/</span><br><span class="line">chown -R apache:apache /opt/localyum/</span><br><span class="line"># 后续添加文件更新</span><br><span class="line">createrepo --update /opt/localyum/</span><br><span class="line">chown -R apache:apache /opt/localyum/</span><br></pre></td></tr></table></figure>
+<h4 id="搭建web服务"><a href="#搭建web服务" class="headerlink" title="搭建web服务"></a>搭建web服务</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># yum install httpd</span><br><span class="line"># vim /etc/httpd/conf/httpd.conf</span><br><span class="line">修改</span><br><span class="line"> 292	DocumentRoot &quot;/opt/localyum/&quot;</span><br><span class="line"> 317	&lt;Directory &quot;/opt/localyum/&quot;&gt;</span><br><span class="line"></span><br><span class="line"># mv /etc/httpd/conf.d/welcome.conf /tmp/</span><br><span class="line">重启服务 service httpd start</span><br><span class="line"># curl localhost  查看index页</span><br></pre></td></tr></table></figure>
+<h3 id="使用内网yum仓库搭建LAMP环境"><a href="#使用内网yum仓库搭建LAMP环境" class="headerlink" title="使用内网yum仓库搭建LAMP环境"></a>使用内网yum仓库搭建LAMP环境</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#环境</span><br><span class="line">CentOS release 6.4 (Final)</span><br><span class="line">172.17.0.5 </span><br><span class="line">#添加本地yum源</span><br><span class="line">vim /etc/yum.repos.d/localyum.repo</span><br><span class="line">#添加内容</span><br><span class="line">[localyum]</span><br><span class="line">name=centos6</span><br><span class="line">baseurl=http://172.17.0.3</span><br><span class="line">enable=1</span><br><span class="line">gpgcheck=0</span><br><span class="line"></span><br><span class="line"># 更新yum源</span><br><span class="line">yum clean all</span><br><span class="line">yum repolist</span><br><span class="line"></span><br><span class="line"># 安装mysql-server</span><br><span class="line">yum install mysql-community-server-5.6.42</span><br><span class="line"># 配置mysql 略过</span><br><span class="line"># 安装php  环境，需先检查本机是否有php</span><br><span class="line">php -version</span><br><span class="line">yum -y install httpd php56w php56w-gd php56w-mysqlnd php56w-bcmath php56w-mbstring php56w-xml php56w-ldap</span><br><span class="line"># 配置php.ini </span><br><span class="line"># vim /etc/php.ini</span><br><span class="line">post_max_size = 16M </span><br><span class="line">max_execution_time = 300 </span><br><span class="line">max_input_time = 300 </span><br><span class="line">date.timezone = Asia/Shanghai </span><br><span class="line">always_populate_raw_post_data = -1</span><br><span class="line"># 创建zabbix 用户和组</span><br><span class="line">groupadd zabbix </span><br><span class="line">useradd -g zabbix zabbix</span><br><span class="line"># 安装zabbix </span><br><span class="line">yum install zabbix zabbix-agent zabbix-get zabbix-sender zabbix-server zabbix-server-mysql zabbix-web zabbix-web-mysql</span><br><span class="line"># 创建zabbix db并初始化数据</span><br><span class="line">mysql&gt;CREATE DATABASE zabbix CHARACTER SET utf8 COLLATE utf8_bin;</span><br><span class="line">mysql&gt;GRANT ALL PRIVILEGES ON zabbix.* TO zabbix@localhost IDENTIFIED BY &apos;zabbix&apos;;</span><br><span class="line">cd /usr/share/doc/zabbix-server-mysql-3.4.15/</span><br><span class="line">gunzip create.sql.gz</span><br><span class="line">mysql -uroot -p zabbix &lt; create.sql</span><br><span class="line"># 配置httpd ，修改</span><br><span class="line"># vim /etc/httpd/conf/httpd.conf</span><br><span class="line">292	DocumentRoot &quot;/usr/share/zabbix/&quot;</span><br><span class="line">317	&lt;Directory &quot;/usr/share/zabbix/&quot;&gt;</span><br><span class="line">402	DirectoryIndex index.html index.html.var index.php</span><br><span class="line"># 配置zabbix-server  </span><br><span class="line"># vim /etc/zabbix/zabbix_server.conf</span><br><span class="line"> 100	DBName=zabbix</span><br><span class="line"> 116	DBUser=zabbix</span><br><span class="line"> 124	DBPassword=zabbix</span><br><span class="line"> # 配置zabbix-agent </span><br><span class="line"> # vim /etc/zabbix/zabbix_agentd.conf</span><br><span class="line"> 97	Server=127.0.0.1 (服务端agent可使用127.0.0.1 ，其他agent 需填写服务端ip)</span><br><span class="line">138	ServerActive=127.0.0.1</span><br><span class="line">149	Hostname=Zabbix server （Hostname 需要与页面上添加的主机名称一致）</span><br><span class="line"># 创建开机启动</span><br><span class="line">chkconfig --add /etc/init.d/zabbix-server</span><br><span class="line">chkconfig --add /etc/init.d/abbix-agent </span><br><span class="line">chkconfig zabbix-server on</span><br><span class="line">chkconfig zabbix-agent on</span><br><span class="line">chkconfig httpd on</span><br><span class="line"># 启动服务</span><br><span class="line">service mysqld start </span><br><span class="line">service httpd start</span><br><span class="line">service zabbix-server start</span><br><span class="line">service zabbix-agent start</span><br></pre></td></tr></table></figure>
+<h4 id="php环境查看"><a href="#php环境查看" class="headerlink" title="php环境查看"></a>php环境查看</h4><p>编写phpinfo文件可在页面查看,把文件放到httpd服务的目录下<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;?php phpinfo(); ?&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="使用zabbix"><a href="#使用zabbix" class="headerlink" title="使用zabbix"></a>使用zabbix</h3><p>登录页面查看zabbix服务是否正常，进行初始化及使用。(开坑)</p>
 
       
     </div>
@@ -479,7 +438,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Docker/" rel="tag"><i class="fa fa-tag"></i> Docker</a>
+            <a href="/tags/zabbix/" rel="tag"><i class="fa fa-tag"></i> zabbix</a>
           
         </div>
       
@@ -492,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/使用vagrant搭建linux开发环境/" rel="next" title="使用vagrant搭建linux开发环境">
-                <i class="fa fa-chevron-left"></i> 使用vagrant搭建linux开发环境
+              <a href="/Docker常用命令/" rel="next" title="Docker常用命令">
+                <i class="fa fa-chevron-left"></i> Docker常用命令
               </a>
             
           </div>
@@ -501,10 +460,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Docker常用命令/" rel="prev" title="Docker常用命令">
-                Docker常用命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -656,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker介绍"><span class="nav-number">1.</span> <span class="nav-text">Docker介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker组件说明"><span class="nav-number">1.1.</span> <span class="nav-text">Docker组件说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker在ubuntu下的安装"><span class="nav-number">1.2.</span> <span class="nav-text">Docker在ubuntu下的安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker在centos下的安装"><span class="nav-number">1.3.</span> <span class="nav-text">Docker在centos下的安装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-安装环境说明"><span class="nav-number">2.</span> <span class="nav-text">Docker 安装环境说明</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#搭建私有yum仓库"><span class="nav-number">1.</span> <span class="nav-text">搭建私有yum仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#仓库服务器环境"><span class="nav-number">1.1.</span> <span class="nav-text">仓库服务器环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下载软件及其依赖包"><span class="nav-number">1.2.</span> <span class="nav-text">下载软件及其依赖包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搭建web服务"><span class="nav-number">1.3.</span> <span class="nav-text">搭建web服务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用内网yum仓库搭建LAMP环境"><span class="nav-number">2.</span> <span class="nav-text">使用内网yum仓库搭建LAMP环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#php环境查看"><span class="nav-number">2.1.</span> <span class="nav-text">php环境查看</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用zabbix"><span class="nav-number">3.</span> <span class="nav-text">使用zabbix</span></a></li></ol></div>
             
 
           </div>
