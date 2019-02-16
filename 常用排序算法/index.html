@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+
+
+  <meta name="keywords" content="python," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="排序算法排序算法的分析排序算法的执行效率 最好情况、最坏情况、平均情况时间复杂度 时间复杂度的系数、常数、低阶 比较次数和交换(或移动)次数排序算法的内存消耗原地排序，特指空间复杂度是O(1)的排序算法排序算法的稳定性有一组数据 2，9，3，4，8，3，按照大小排序之后，按照大小排序后就是 2，3，3，4，8，9；这里有两个3，如果排序后两个3的位置没有变，那么这种排序算法就是稳定的，反之就是不稳">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用排序算法">
+<meta property="og:url" content="https://diaoyongbao.github.io/常用排序算法/index.html">
+<meta property="og:site_name" content="Dyb&#39;s BLOG">
+<meta property="og:description" content="排序算法排序算法的分析排序算法的执行效率 最好情况、最坏情况、平均情况时间复杂度 时间复杂度的系数、常数、低阶 比较次数和交换(或移动)次数排序算法的内存消耗原地排序，特指空间复杂度是O(1)的排序算法排序算法的稳定性有一组数据 2，9，3，4，8，3，按照大小排序之后，按照大小排序后就是 2，3，3，4，8，9；这里有两个3，如果排序后两个3的位置没有变，那么这种排序算法就是稳定的，反之就是不稳">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-02-16T10:39:37.848Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用排序算法">
+<meta name="twitter:description" content="排序算法排序算法的分析排序算法的执行效率 最好情况、最坏情况、平均情况时间复杂度 时间复杂度的系数、常数、低阶 比较次数和交换(或移动)次数排序算法的内存消耗原地排序，特指空间复杂度是O(1)的排序算法排序算法的稳定性有一组数据 2，9，3，4，8，3，按照大小排序之后，按照大小排序后就是 2，3，3，4，8，9；这里有两个3，如果排序后两个3的位置没有变，那么这种排序算法就是稳定的，反之就是不稳">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://diaoyongbao.github.io/常用排序算法/"/>
+
+
+
+
+
+  <title>常用排序算法 | Dyb's BLOG</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?f1ae5bf61e7c8f56bc83bf4b1a5a1f29";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Dyb's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">生命不息，折腾不止</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://diaoyongbao.github.io/常用排序算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dyb">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dyb's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常用排序算法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-16T18:39:16+08:00">
+                2019-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/常用排序算法/" class="leancloud_visitors" data-flag-title="常用排序算法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,715字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="排序算法的分析"><a href="#排序算法的分析" class="headerlink" title="排序算法的分析"></a>排序算法的分析</h2><h3 id="排序算法的执行效率"><a href="#排序算法的执行效率" class="headerlink" title="排序算法的执行效率"></a>排序算法的执行效率</h3><ol>
+<li>最好情况、最坏情况、平均情况时间复杂度</li>
+<li>时间复杂度的系数、常数、低阶</li>
+<li>比较次数和交换(或移动)次数<h3 id="排序算法的内存消耗"><a href="#排序算法的内存消耗" class="headerlink" title="排序算法的内存消耗"></a>排序算法的内存消耗</h3>原地排序，特指空间复杂度是O(1)的排序算法<h3 id="排序算法的稳定性"><a href="#排序算法的稳定性" class="headerlink" title="排序算法的稳定性"></a>排序算法的稳定性</h3>有一组数据 2，9，3，4，8，3，按照大小排序之后，按照大小排序后就是 2，3，3，4，8，9；这里有两个3，如果排序后两个3的位置没有变，那么这种排序算法就是稳定的，反之就是不稳定的。<h2 id="冒泡、插入、选择排序"><a href="#冒泡、插入、选择排序" class="headerlink" title="冒泡、插入、选择排序"></a>冒泡、插入、选择排序</h2>此3种排序的时间复杂度皆为O(n^2)<a id="more"></a>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3>将数组中的数据分为两个区间，已排序区间和未排序区间。核心思想是取未排序区间的元素，在已排序区间找到何使的插入位置将其插入，保证已排序区间数据一致有序。重复此过程，直到未排序区间中元素为空，排序结束。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def insert_sort(lst):#插入排序</span><br><span class="line">    for i in range(1,len(lst)):         # 开始片段[0,1]已排序</span><br><span class="line">        x = lst[i]                      # x取列表第二位值</span><br><span class="line">        j = i                           </span><br><span class="line">        while j&gt;0 and lst[j-1] &gt; x:     # 判断未排序区间是否比排序区间的数字大</span><br><span class="line">            lst[j] = lst[j-1]           # 反序逐个后移元素，确定插入位置</span><br><span class="line">            j=j-1                       # j自减，从当前位置向下比较</span><br><span class="line">        lst[j] =x                       # 插入元素</span><br><span class="line">        print(lst)                      # 输出每次排序后的结果</span><br><span class="line">    return lst</span><br><span class="line">print(insert_sort([100,99,98,111,33,3,123]))</span><br><span class="line"></span><br><span class="line">&gt;&gt;</span><br><span class="line">[99, 100, 98, 111, 33, 3, 123]</span><br><span class="line">[98, 99, 100, 111, 33, 3, 123]</span><br><span class="line">[98, 99, 100, 111, 33, 3, 123]</span><br><span class="line">[33, 98, 99, 100, 111, 3, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>选择排序与插入排序的思路类似，也分已排区间和未排序区间；但是选择排序每次会从未排序区间种找到最小的元素，将其放到已排序区间的末尾。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def select_sort(lst):</span><br><span class="line">    # 每一次内循环选出最小的值，外循环控制次数</span><br><span class="line">    for i in range(len(lst)-1):#总循环次数len(num)-1</span><br><span class="line">        k=i</span><br><span class="line">        for j in range(i,len(lst)):</span><br><span class="line">            if lst[j] &lt; lst[k]:</span><br><span class="line">                k=j #选出最小的值的位置k</span><br><span class="line">        if i != k:</span><br><span class="line">            lst[i],lst[k] =lst[k],lst[i] #交换数据</span><br><span class="line">        print(lst)</span><br><span class="line">    return lst</span><br><span class="line"></span><br><span class="line">print(select_sort([100, 99, 98, 111, 33, 3, 123]))</span><br><span class="line">&gt;&gt;</span><br><span class="line">[3, 99, 98, 111, 33, 100, 123]</span><br><span class="line">[3, 33, 98, 111, 99, 100, 123]</span><br><span class="line">[3, 33, 98, 111, 99, 100, 123]</span><br><span class="line">[3, 33, 98, 99, 111, 100, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br></pre></td></tr></table></figure></p>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>冒泡排序只会操作相邻的两个元素。每次冒泡排序都会对相邻的两个元素进行比较，看是否满足大小关系要求。如果不满足则互换。一次冒泡至少会让一个元素移动到它应该在的位置，重复n次，就完成了n个数据的排序工作。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def bubble_sort(lst):#冒泡排序</span><br><span class="line">    for i in range(len(lst)-1): #外循环</span><br><span class="line">        for j in range(1,len(lst)-i):# 内循环</span><br><span class="line">            if lst[j-1] &gt;lst[j]:</span><br><span class="line">                lst[j-1],lst[j]=lst[j],lst[j-1]</span><br><span class="line">        print(lst)</span><br><span class="line">    return lst</span><br><span class="line">print(bubble_sort([100, 99, 98, 111, 33, 3, 123]))</span><br><span class="line">&gt;&gt;</span><br><span class="line">[99, 98, 100, 33, 3, 111, 123]</span><br><span class="line">[98, 99, 33, 3, 100, 111, 123]</span><br><span class="line">[98, 33, 3, 99, 100, 111, 123]</span><br><span class="line">[33, 3, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br></pre></td></tr></table></figure></p>
+<p>但是上述冒泡排序是未优化的，优化思路大致如下：</p>
+<ol>
+<li>加入排序标志位，如果一次冒泡操作没有数据交换时，说明已经达到完全有序，不用再进行后续的冒泡操作，退出此次冒泡即可；</li>
+<li>将列表进行左右同时冒泡排序，减少循环次数<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def bubble_sort(lst):</span><br><span class="line">#   最优冒泡算法，左右双向排序，同时进行</span><br><span class="line">    for j in range(len(lst)):</span><br><span class="line">        flag = False        # 结束标志位</span><br><span class="line">        for i in range(j+1,len(lst)-j):</span><br><span class="line">            if lst[i-1]&gt;lst[i]:         #正向选择最大，前一位比后一位大</span><br><span class="line">                lst[i-1],lst[i] = lst[i],lst[i-1]</span><br><span class="line">                flag = True</span><br><span class="line">            if lst[len(lst)-i-1]&gt;lst[len(lst)-i]:       #反向选择最小，前一位比后一位小</span><br><span class="line">                lst[len(lst) - i - 1],lst[len(lst)-i]=lst[len(lst)-i],lst[len(lst)-i-1]</span><br><span class="line">                flag = True</span><br><span class="line">            else:</span><br><span class="line">                flag =True</span><br><span class="line">                pass</span><br><span class="line">        if not flag:</span><br><span class="line">            break</span><br><span class="line">        print(lst)</span><br><span class="line">    return lst</span><br><span class="line">print(bubble_sort([100, 99, 98, 111, 33, 3, 123]))</span><br><span class="line">&gt;&gt;</span><br><span class="line">[3, 99, 98, 100, 33, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>由上述结果可看出，优化后的冒泡在第二次排序后就已经排序好了。</p>
+<h2 id="快排，归并排序"><a href="#快排，归并排序" class="headerlink" title="快排，归并排序"></a>快排，归并排序</h2><p>快速排序和归并排序的时间复杂度都是O(nlogn)</p>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>归并排序的核心思想是，如果要排序一个数组，先把数组从中间分成两个部分，然后对两个部分分别排序，再将排序好的结果合并到一起，这样整个数组就有序了。<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def merge(left, right):</span><br><span class="line">    i, j = 0, 0</span><br><span class="line">    result = []</span><br><span class="line">    while i &lt; len(left) and j &lt; len(right):  # 比较传入的两个子序列，对两个子序列进行排序</span><br><span class="line">        if left[i] &lt;= right[j]:</span><br><span class="line">            result.append(left[i])</span><br><span class="line">            i += 1</span><br><span class="line">        else:</span><br><span class="line">            result.append(right[j])</span><br><span class="line">            j += 1</span><br><span class="line">    result.extend(left[i:])         # 将排好序的子序列合并</span><br><span class="line">    result.extend(right[j:])</span><br><span class="line">    print(result)</span><br><span class="line">    return result</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def merge_sort(lst):</span><br><span class="line">    if len(lst) &lt;= 1:</span><br><span class="line">        return lst          # 从递归中返回长度为1的序列</span><br><span class="line">    middle = int(len(lst) / 2)</span><br><span class="line">    left = merge_sort(lst[:middle])     # 通过不断递归，将原始序列拆分成n个小序列</span><br><span class="line">    right = merge_sort(lst[middle:])</span><br><span class="line">    return merge(left, right)</span><br><span class="line">print(merge_sort([100, 99, 98, 111, 33, 3,123]))</span><br><span class="line">&gt;&gt;</span><br><span class="line">[98, 99]</span><br><span class="line">[98, 99, 100]</span><br><span class="line">[33, 111]</span><br><span class="line">[3, 123]</span><br><span class="line">[3, 33, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br></pre></td></tr></table></figure></p>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>快速排序的思想是如果要排序数组中下标从p到r之间的一组数据，我们选择p到r之间的任意一个数据作为pivot(分区点)<br>然后遍历p到r之间的数据，将小于pivot的放到左边，大于pivot的放到右边，pivot则在中间；这样这个数组则被分为三个部分p—&gt;pivot-1,pivot,pivot+1-&gt;r，然后根据递归的思路，不断的递归排序下标p-&gt;pivot-1，pivot+1-&gt;r,直到区间缩为1.<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def partition(lst, p, r):   #原地分区函数</span><br><span class="line">    i = p             # 定义游标i，将lst分为两个区间，与选择排序类似</span><br><span class="line">    for j in range(p, r):  </span><br><span class="line">        if lst[j] &lt;= lst[r]: </span><br><span class="line">            lst[i], lst[j] = lst[j], lst[i]</span><br><span class="line">            i += 1</span><br><span class="line">            </span><br><span class="line">    lst[i], lst[r] = lst[r], lst[i] </span><br><span class="line">    print(lst)</span><br><span class="line">    return i</span><br><span class="line"></span><br><span class="line">def quicksort(lst, p, r):</span><br><span class="line">    if p &lt; r:</span><br><span class="line">        pivot = partition(lst, p, r)  </span><br><span class="line">        quicksort(lst, p, pivot - 1)</span><br><span class="line">        quicksort(lst, pivot + 1, r)</span><br><span class="line">    return lst</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">lst = [100, 99, 98, 111, 33, 3, 123]</span><br><span class="line">print(quicksort(lst, 0, len(lst)-1))</span><br><span class="line">&gt;&gt;</span><br><span class="line">[100, 99, 98, 111, 33, 3, 123]</span><br><span class="line">[3, 99, 98, 111, 33, 100, 123]</span><br><span class="line">[3, 99, 98, 33, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br><span class="line">[3, 33, 98, 99, 100, 111, 123]</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"><i class="fa fa-tag"></i> python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/ansible配置及使用/" rel="next" title="ansible配置及使用">
+                <i class="fa fa-chevron-left"></i> ansible配置及使用
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="dyb" />
+            
+              <p class="site-author-name" itemprop="name">dyb</p>
+              <p class="site-description motion-element" itemprop="description">python  运维  技术宅</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/diaoyongbao" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:dyb6884@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#排序算法"><span class="nav-number">1.</span> <span class="nav-text">排序算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#排序算法的分析"><span class="nav-number">1.1.</span> <span class="nav-text">排序算法的分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法的执行效率"><span class="nav-number">1.1.1.</span> <span class="nav-text">排序算法的执行效率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法的内存消耗"><span class="nav-number">1.1.2.</span> <span class="nav-text">排序算法的内存消耗</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序算法的稳定性"><span class="nav-number">1.1.3.</span> <span class="nav-text">排序算法的稳定性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡、插入、选择排序"><span class="nav-number">1.2.</span> <span class="nav-text">冒泡、插入、选择排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插入排序"><span class="nav-number">1.2.1.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择排序"><span class="nav-number">1.2.2.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.2.3.</span> <span class="nav-text">冒泡排序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快排，归并排序"><span class="nav-number">1.3.</span> <span class="nav-text">快排，归并排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#归并排序"><span class="nav-number">1.3.1.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快速排序"><span class="nav-number">1.3.2.</span> <span class="nav-text">快速排序</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dyb</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("0LaOfhaJtyYkftUUxtXpuTLW-gzGzoHsz", "MdR2xLU2SHi9RcQkjimgUmXX");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
