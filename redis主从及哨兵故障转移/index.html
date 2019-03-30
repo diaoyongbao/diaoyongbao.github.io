@@ -86,16 +86,17 @@
 
 
 
-<meta name="description" content="python  运维  技术宅">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Dyb&#39;s BLOG">
-<meta property="og:url" content="https://diaoyongbao.github.io/tags/ansible/index.html">
+<meta name="description" content="环境搭建环境：centos7.5redis version：3.2.12master：172.28.128.4node01：172.28.128.5 redis主从复制 特点：一个master可由多个slave组成；支持链式复制，master以非阻塞方式同步数据至slave 主从复制过程(原理)：当从节点进行slave of masterIP masterPORT命令时, 保存主节点信息 主从建立">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis主从及哨兵故障转移">
+<meta property="og:url" content="https://diaoyongbao.github.io/redis主从及哨兵故障转移/index.html">
 <meta property="og:site_name" content="Dyb&#39;s BLOG">
-<meta property="og:description" content="python  运维  技术宅">
+<meta property="og:description" content="环境搭建环境：centos7.5redis version：3.2.12master：172.28.128.4node01：172.28.128.5 redis主从复制 特点：一个master可由多个slave组成；支持链式复制，master以非阻塞方式同步数据至slave 主从复制过程(原理)：当从节点进行slave of masterIP masterPORT命令时, 保存主节点信息 主从建立">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-03-30T05:56:25.117Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dyb&#39;s BLOG">
-<meta name="twitter:description" content="python  运维  技术宅">
+<meta name="twitter:title" content="redis主从及哨兵故障转移">
+<meta name="twitter:description" content="环境搭建环境：centos7.5redis version：3.2.12master：172.28.128.4node01：172.28.128.5 redis主从复制 特点：一个master可由多个slave组成；支持链式复制，master以非阻塞方式同步数据至slave 主从复制过程(原理)：当从节点进行slave of masterIP masterPORT命令时, 保存主节点信息 主从建立">
 
 
 
@@ -125,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://diaoyongbao.github.io/tags/ansible/"/>
+  <link rel="canonical" href="https://diaoyongbao.github.io/redis主从及哨兵故障转移/"/>
 
 
 
 
 
-  <title>标签: ansible | Dyb's BLOG</title>
+  <title>redis主从及哨兵故障转移 | Dyb's BLOG</title>
   
 
 
@@ -160,7 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -264,54 +265,243 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>ansible<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://diaoyongbao.github.io/redis主从及哨兵故障转移/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dyb">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Dyb's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/ansible配置及使用/" itemprop="url">
-              
-                <span itemprop="name">ansible配置及使用</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">redis主从及哨兵故障转移</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-02-14T19:25:22+08:00"
-              content="2019-02-14" >
-          02-14
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-30T13:56:01+08:00">
+                2019-03-30
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/redis主从及哨兵故障转移/" class="leancloud_visitors" data-flag-title="redis主从及哨兵故障转移">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  709字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>环境：centos7.5<br>redis version：3.2.12<br>master：172.28.128.4<br>node01：172.28.128.5</p>
+<h2 id="redis主从复制"><a href="#redis主从复制" class="headerlink" title="redis主从复制"></a>redis主从复制</h2><ul>
+<li>特点：一个master可由多个slave组成；支持链式复制，master以非阻塞方式同步数据至slave</li>
+<li>主从复制过程(原理)：当从节点进行slave of masterIP masterPORT命令时,<ul>
+<li>保存主节点信息</li>
+<li>主从建立socket连接</li>
+<li>发送ping命令</li>
+<li>权限认证</li>
+<li>同步数据集</li>
+<li>命令持续复制<a id="more"></a></li>
+</ul>
+</li>
+<li>注意：<ul>
+<li>从服务器配置文件的bind需将本地IP放置在127.0.0.1之前，或使用0.0.0.0</li>
+<li>如果masster使用requirepass开启了认证功能，从服务器使用masterauth password来连入服务请求使用此密码进行认证</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>主节点出现问题，则不能提供服务，需人工进行故障转移</li>
+<li>主从节点的写能力单机，能力有限</li>
+<li>单机节点的存储有限<h2 id="主从实现"><a href="#主从实现" class="headerlink" title="主从实现"></a>主从实现</h2></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>两台服务器分别yum install redis</li>
+<li>修改配置文件/etc/redis.conf<br> <code>bind 0.0.0.0</code></li>
+<li>启动redis<br> <code>redis-server /etc/redis.conf &amp;</code></li>
+<li>进入master节点的redis设置一个件<br><code>redis-cli -h 172.28.128.4</code><br><code>set redis haha</code></li>
+<li>进入从节点<br><code>redis-cli -h 172.28.128.5</code><br><code>slaveof 172.28.128.4</code><br><code>keys *</code> –&gt;”redis”<br><code>info replication</code><blockquote>
+<p>#Replication</p>
+<pre><code>role:slave
+master_host:172.28.128.4
+master_port:6379
+</code></pre></blockquote>
+<h2 id="哨兵的故障转移机制及实现"><a href="#哨兵的故障转移机制及实现" class="headerlink" title="哨兵的故障转移机制及实现"></a>哨兵的故障转移机制及实现</h2></li>
+</ol>
+<ul>
+<li>功能：用于管理多个redis服务实现高可用，解决部分redis主从复制的缺点</li>
+<li>故障转移：<ol>
+<li>由sentinel节点定期监控主节点是否发生故障；sentinel向master发送心跳包PING来确认master是否存活，如果master在“一定时间内”未回复PONG或者回复错误消息，那么sentinel会主观认为这个master已经不可用。</li>
+<li>当主节点出现故障，由多个sentinel节点进行投票并选举一个从节点作为master节点</li>
+<li>sentinel执行故障转移，将一个从节点升级为主节点，将剩余的从节点指向到新的主节并通知客户端主节点已更换</li>
+<li>当原来的主节点重新上线时，会变成从节点，并指向到新的主节点。</li>
+</ol>
+</li>
+</ul>
+<h2 id="故障转移实现"><a href="#故障转移实现" class="headerlink" title="故障转移实现"></a>故障转移实现</h2><p>基于上面的一主一从，添加一个sentinel服务，模拟主节点下线后，sentinel进行的故障转移。</p>
+<ol>
+<li>修改sentinel配置文件<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">vim /etc/redis-sentinel.conf</span><br><span class="line">sentinel monitor mymaster 172.28.128.4 6379 1</span><br><span class="line"># 指明监控的主节点</span><br><span class="line">其他默认即可</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>2.启动redis-sentinel服务<br><code>redis-sentinel /etc/redis-sentinel.conf &amp;</code><br>3.进入sentinel服务中查看目前的master<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">redis-cli -p 26379</span><br><span class="line">sentinel masters</span><br><span class="line">&gt;1)  1) &quot;name&quot;</span><br><span class="line">    2) &quot;mymaster&quot;</span><br><span class="line">    3) &quot;ip&quot;</span><br><span class="line">    4) &quot;172.28.128.4&quot;</span><br><span class="line">    5) &quot;port&quot;</span><br><span class="line">    6) &quot;6379&quot;</span><br></pre></td></tr></table></figure></p>
+<ol start="4">
+<li>认为结束master节点上的redis进程</li>
+<li><p>再次查看sentinel中的master</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sentinel masters</span><br><span class="line">&gt;1)  1) &quot;name&quot;</span><br><span class="line">    2) &quot;mymaster&quot;</span><br><span class="line">    3) &quot;ip&quot;</span><br><span class="line">    4) &quot;172.28.128.5&quot;</span><br><span class="line">    5) &quot;port&quot;</span><br><span class="line">    6) &quot;6379&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>也可手动强制故障转移<br><code>sentinel failover &lt;mastername&gt;</code></p>
+</li>
+</ol>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/常用排序算法/" rel="next" title="常用排序算法">
+                <i class="fa fa-chevron-left"></i> 常用排序算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -319,6 +509,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -339,8 +533,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -420,6 +623,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境搭建"><span class="nav-number">1.</span> <span class="nav-text">环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis主从复制"><span class="nav-number">2.</span> <span class="nav-text">redis主从复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主从实现"><span class="nav-number">3.</span> <span class="nav-text">主从实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哨兵的故障转移机制及实现"><span class="nav-number">4.</span> <span class="nav-text">哨兵的故障转移机制及实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#故障转移实现"><span class="nav-number">5.</span> <span class="nav-text">故障转移实现</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -581,6 +800,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
