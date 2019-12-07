@@ -69,8 +69,8 @@ gitalk:
    enable: true
    owner: diaoyongbao
    repo: diaoyongbao.github.io
-   clientID: 3e12c08c2ec52afbcb30
-   clientSecret: c2a74d279e7b42cf782a1d2d1b5a410d27c5ab57
+   clientID: 45ba40c2a018d3d41616
+   clientSecret: 05b933f565e5a64f31ad64621dcec07ca05481bb
    admin: diaoyongbao
 
 
