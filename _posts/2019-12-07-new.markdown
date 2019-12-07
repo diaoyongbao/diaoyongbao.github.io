@@ -10,4 +10,6 @@ tags:
 ---
 
 > “Yeah It's on. ”
-## 测试页面的生成![20191207190335.png](https://raw.githubusercontent.com/diaoyongbao/images/master/20191207190335.png)![v2-b621988b3a3eee0ec7040f524a7ab5ea_r.jpg](https://raw.githubusercontent.com/diaoyongbao/images/master/v2-b621988b3a3eee0ec7040f524a7ab5ea_r.jpg)
+## 测试页面的生成!
+![20191207191807.png](https://raw.githubusercontent.com/diaoyongbao/diaoyongbao.github.io/master/img/20191207191807.png)
+
