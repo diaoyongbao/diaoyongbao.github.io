@@ -1,0 +1,41 @@
+---
+layout:     post
+title:    "iOS Flutter模块提交ipa Error 90087,90209,90125"
+subtitle:   "Flutter上架 error了"
+date: 2019-12-07 08:32:24.000000000 +09:00
+author:     "dyb"
+header-img: "img/post_2019_1023.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+- docker
+---
+> Docker 包括三个基本概念:
+>  *  镜像(image)
+ >   *  容器(container)
+ >   *  仓库(repository) 
+
+## Docker镜像的常用命令
+- 查找镜像
+`docker search [imagename]`
+
+- 获取镜像
+`docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
+`
+- 列出本地镜像
+`docker image ls`
+- 镜像体积
+`docker system df`
+- 删除镜像
+`docker image rm [image id]/[name]`
+- 镜像打包
+`docker save -o [imagename].tar [imagename]`
+- 镜像载入
+`docker load --input [imagename].tar`
+`docker  load < [imagename].tar`
+- 镜像标签
+`docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`
+
+## Docker容器的常用命令
+- 启动容器
+    `	docker container run [OPTIONS] IMAGE [COMM
