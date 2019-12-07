@@ -13,7 +13,7 @@ future: true
 # SNS settings
 RSS: true
 # weibo_username:     2524618644
-zhihu_username:     弑小君
+zhihu_username:     shi-xiao-jun-17
 github_username:    diaoyongbao
 # linkedin_username:  露鑫-李-525b58111
 # twitter_username:   yizibi
@@ -60,20 +60,17 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-# Comment
-#comment:
-    #disqus: yizibi
 
 # Netease settings
 netease_comment: false
 
 gitalk:
    enable: true
-   owner: yizibi
-   repo: yizibi.github.io
+   owner: diaoyongbao
+   repo: diaoyongbao.github.io
    clientID: 3e12c08c2ec52afbcb30
    clientSecret: c2a74d279e7b42cf782a1d2d1b5a410d27c5ab57
-   admin: yizibi
+   admin: diaoyongbao
 
 
 # Analytics settings

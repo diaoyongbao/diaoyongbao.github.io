@@ -1,12 +1,12 @@
 ---
 layout:     post
-title:    "iOS Flutter模块提交ipa Error 90087,90209,90125"
-subtitle:   "Flutter上架 error了"
+title:    "Docker 的使用方式"
+subtitle:   "docker 概念"
 date: 2019-12-07 08:32:24.000000000 +09:00
 author:     "dyb"
 header-img: "img/post_2019_1023.jpg"
 header-mask: 0.3
-catalog:    true
+catalog:  true
 tags:
 - docker
 ---
