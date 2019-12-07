@@ -28,7 +28,8 @@ textColor: #FF0000
 permalink: pretty
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md","README.zh.md"]
-anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+anchorjs: true                         
+ # if you want to customize anchor. check out line:181 of `post.html`
 # If you have timezone issue (e.g. #68) in China, uncomment to use this:
 timezone: CN  
 
@@ -78,7 +79,7 @@ gitalk:
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-124793396-1'            # Format: UA-xxxxxx-xx
+ga_track_id: 'UA-154191566-1'            # Format: UA-xxxxxx-xx
 ga_domain: auto
 
 
