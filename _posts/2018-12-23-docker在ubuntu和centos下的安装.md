@@ -29,7 +29,6 @@ Linux内核提供的一种限制单进程或者多进程资源的机制；比如
 高级多层统一文件系统，是UFS的一种，每个branch可以指定readonly（ro只读）、readwrite（读写）和whiteout-able（wo隐藏）权限；一般情况下，aufs只有最上层的branch才有读写权限，其他branch均为只读权限。
 **UFS（UnionFS）**
 联合文件系统，支持将不同位置的目录挂载到同一虚拟文件系统，形成一种分层的模型；成员目录称为虚拟文件系统的一个分支（branch）。
-![8b872c2af650e2ed08edf325eee5f2b8.png](en-resource://database/2274:1)
 
 ## Docker在ubuntu下的安装
 1. 系统版本
