@@ -1,6 +1,6 @@
 ---
 layout:    post
-title:    "How Devops?基于k8s的devops实践"
+title:    "How Devops?基于k8s的实践"
 subtitle:    "序"
 date:  2020-01-01 15:44:31.000000000 +09:00
 author:    "dyb"

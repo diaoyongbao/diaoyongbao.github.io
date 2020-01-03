@@ -1,6 +1,6 @@
 ---
 layout:    post
-title:    "How Devops?基于K8s的实践(一)"
+title:    "How Devops?基于K8s的实践"
 subtitle:    "kubernetes集群环境搭建"
 date:  2020-01-03 21:05:19.000000000 +09:00
 author:    "dyb"
