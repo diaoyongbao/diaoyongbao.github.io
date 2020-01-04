@@ -10,3 +10,4 @@ catalog:  true
 tags:
 - Devops
 ---
+关于这些软件的具体使用细节，目前不做过多的介绍，这几个软件也是devops流程中比较重要的一部分，同时confluence和jira是
