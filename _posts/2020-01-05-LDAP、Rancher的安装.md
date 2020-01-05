@@ -20,7 +20,7 @@ tags:
 2. 根据打包后的镜像进行部署，修改run*.yaml脚本中的镜像文件地址
 3. 修改ingres地址后进行访问
 4. 破解方式，此处可能需要设置两次
-   `kubectl exec -c jira jira-69fb66df9c-tgbzt -n atlassian -- java -jar /opt/atlassian/jira/atlassian-agent.jar -d -m admin@devops.com -n devops -p jira -o http://jira.devops.com -s BG5D-5PND-0P53-QN2L`
+   `kubectl exec -c jira POD的名称 -n atlassian -- java -jar /opt/atlassian/jira/atlassian-agent.jar -d -m admin@devops.com -n devops -p jira -o http://jira.devops.com -s Server_ID的内容`
    
    ![20200105174607.png](http://q3kxy68ol.bkt.clouddn.com/img/20200105174607.png)
 5. 数据库连接,在Dockerfile文件中已将mysql的连接jar包添加到镜像中，可自行部署mysql服务已供使用。最好使用外部的mysql,k8s内部的mysql最好使用configMap进行配置文件设置。
