@@ -32,3 +32,15 @@ tags:
 * KUBERNETES: 1.15.7
 * JIRA： 8.6.0
 * CONFLUENCE：7.2.0
+* JENKINS：
+  * kubernetes:1.21.2
+  * workflow-job:2.36
+  * workflow-aggregator:2.6
+  * credentials-binding:1.20
+  * git:4.0.0
+  * uno-choice:2.2.2
+  * blueocean:1.21.0
+  * gitlab-plugin:1.5.13
+  * jira:3.0.11
+  * localization-zh-cn:1.0.13
+  * ldap:1.21
