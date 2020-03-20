@@ -3,7 +3,7 @@ name: 自動部署 Hexo
 on:
   push:
     branches:
-      - master
+      - hexo
 
 jobs:
   build:
@@ -46,6 +46,5 @@ jobs:
           git config user.name "${{secrets.GIT_NAME}}"
           git config user.email "${{secrets.GIT_EMAIL}}"
           git add .
-          git commit -m "Update"
+          git commit -m "git auto pdate"
           git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
-          git push --force --quiet "https://${{secrets.CD_TOKEN}}@${{secrets.CD_REF}}" master:master
