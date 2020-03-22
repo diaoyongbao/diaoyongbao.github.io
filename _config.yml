@@ -102,3 +102,6 @@ deploy:
   repository:
     github: git@github.com:diaoyongbao/diaoyongbao.github.io.git
   branch: master
+
+aplayer:
+  meting: true
