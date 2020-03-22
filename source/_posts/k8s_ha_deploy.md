@@ -1,5 +1,5 @@
 ---
-title: nginx泛域名解析
+title: k8s 高可用部署
 date: 2020/01/27
 tags: 
 - k8s
