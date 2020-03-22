@@ -108,7 +108,7 @@ mermaid:
 # ---------------
 avatar:
   img: /img/avatar.png
-  effect: false # 頭像會一直轉圈
+  effect: true # 頭像會一直轉圈
 
 # the banner image of index
 index_img:
@@ -184,7 +184,7 @@ auto_open_sidebar:
 
 post_copyright:
   enable: true
-  decode: false
+  decode: true
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
@@ -283,7 +283,7 @@ utterances:
 
 #####     Footer Settings    ####
 # ------------------------------------
-since: 2020
+since: 2019
 
 footer_custom_text:
 
@@ -362,20 +362,20 @@ related_post:
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 # ---------------
-# theme_color:
-#   enable: true
-#   main: "#49B1F5"
-#   paginator: "#00c4b6"
-#   button_hover: "#FF7242"
-#   text_selection: "#00c4b6"
-#   link_color: "#99a9bf"
-#   meta_color: "#858585"
-#   hr_color: "#A4D8FA"
-#   code_foreground: "#F47466"
-#   code_background: "rgba(27, 31, 35, .05)"
-#   toc_color: "#00c4b6"
-#   blockquote_padding_color: "#49b1f5"
-#   blockquote_background_color: "#49b1f5"
+theme_color:
+  enable: true
+  main: "#49B1F5"
+  paginator: "#00c4b6"
+  button_hover: "#FF7242"
+  text_selection: "#00c4b6"
+  link_color: "#99a9bf"
+  meta_color: "#858585"
+  hr_color: "#A4D8FA"
+  code_foreground: "#F47466"
+  code_background: "rgba(27, 31, 35, .05)"
+  toc_color: "#00c4b6"
+  blockquote_padding_color: "#49b1f5"
+  blockquote_background_color: "#49b1f5"
 
 # 主頁設置
 # 默認top_img全屏，site_info在中間
@@ -497,8 +497,8 @@ subtitle:
   # (如果有英文逗號' , '，請使用轉義字符 &#44;)
   # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
   sub:
-    - 今日事&#44;今日畢
-    - Never put off till tomorrow what you can do today
+    - 万般皆苦 唯有自渡
+    - If Not You Not Me
 
 # fontawesome圖標
 # 默認使用的是 fontawesome v4版本的圖標
@@ -536,7 +536,7 @@ busuanzi:
 # 也可以寫成 年/月/日 時間
 runtimeshow:
   enable: true
-  start_date: 6/7/2018 00:00:00
+  start_date: 1/1/2019 00:00:00
 
 ####   右下角按鈕  ####
 #----------------------------------------------
@@ -550,7 +550,7 @@ translate:
   #延遲時間,若不在前, 要設定延遲翻譯時間, 如100表示100ms,默認為0
   translateDelay: 0
   #博客網址
-  cookieDomain: "https://xxx/"
+  cookieDomain: "https://diaoyongbao.igthub.io/"
   #當文字是簡體時，按鈕顯示的文字
   msgToTraditionalChinese: "繁"
   #當文字是繁體時，按鈕顯示的文字
