@@ -154,7 +154,7 @@ lodding_bg:
 
 # A simple 404 page
 error_404:
-  enable: false
+  enable: true
   subtitle: "Page Not Found"
   background:
 
@@ -310,9 +310,9 @@ tencent_analytics:
 # ---------------
 # Google Adsense
 google_adsense:
-  enable: false
+  enable: true
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-  client:
+  client: ca-pub-6691618689206079
   enable_page_level_ads: true
 
 # 廣告插入位置
