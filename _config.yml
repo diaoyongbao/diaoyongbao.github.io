@@ -98,4 +98,7 @@ theme: Butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repository:
+    github: git@github.com:diaoyongbao/diaoyongbao.github.io.git
+  branch: master
