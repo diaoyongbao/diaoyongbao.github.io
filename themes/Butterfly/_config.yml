@@ -45,15 +45,15 @@ code_word_wrap: false
 # copyright 複製的內容後面加上版權信息
 copy:
   enable: true # true 開啟 / false 禁止
-  copyright: false
+  copyright: true
 
 # social settings
 # formal:
 #   icon: link
 # ---------------
 social:
-  fa fa-github: https://github.com/jerryc127
-  fa fa-envelope: mailto:xxxxxxxx@gmail.com
+  fa fa-github: https://github.com/diaoyongbao.git
+  fa fa-envelope: mailto:dyb6884@gmail.com
   fa fa-rss: /atom.xml
 
 ####    search    ####
@@ -240,12 +240,12 @@ laibili:
   uid:
 
 gitalk:
-  enable: false
-  client_id:
-  client_secret:
-  repo:
-  owner:
-  admin:
+  enable: true
+  client_id: 45ba40c2a018d3d41616
+  client_secret: 05b933f565e5a64f31ad64621dcec07ca05481bb
+  repo: https://diaoyongbao.github.io/
+  owner: diaoyongbao
+  admin: ["diaoyongbao"]
   language: zh-CN # en , zh-CN , zh-TW
   perPage: 10 # Pagination size, with maximum 100.
   distractionFreeMode: false # Facebook-like distraction free mode.
