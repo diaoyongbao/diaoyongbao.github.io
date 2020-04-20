@@ -10,7 +10,6 @@ categories: 运维
 comments: 
 description: mysql主从复制，mycat读写分离、分库分表
 top_img: https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260
-cover： https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260
 ---
 <!-- TOC -->
 <!-- /TOC -->
@@ -398,14 +397,18 @@ yum localinstall xxxmanage
 |   1    | 全部的readHost和备份writeHost都参与读的负载均衡，例如上述配置中，参与读负载均衡的有master_write,141_read,143_read |
 |   2    |                                    所有的读操作都会在writeHost和readHost上分发                                    |
 |   3    |                  所有的读请求随机分发到wiriterHost 对应的readhost 执行，writerHost 不负担读压力                   |
+
 switchType用来配置MySQL的高可用，目前此环境的高可用方案为MHA，此项不重要
+
 | 属性值 | 作用                                           |
 | :----- | :--------------------------------------------- |
 | -1     | 宕机时不自动切换                               |
 | 1      | 默认值，宕机时切换为备用机                     |
 | 2      | 基于MySQL的主从同步状态决定是否切换            |
 | 3      | 基于MySQL galary cluster的切换机制，适用于集群 |
+
 writeType用来配置mycat的读写分离
+
 | 属性值 | 作用                                          |
 | :----- | :-------------------------------------------- |
 | 0      | 所有写操作都发送到可用的writeHost上           |
