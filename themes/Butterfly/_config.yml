@@ -240,7 +240,7 @@ laibili:
   uid:
 
 gitalk:
-  enable: true
+  enable: false
   client_id: 45ba40c2a018d3d41616
   client_secret: 05b933f565e5a64f31ad64621dcec07ca05481bb
   repo: https://diaoyongbao.github.io/
