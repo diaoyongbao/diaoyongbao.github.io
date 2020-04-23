@@ -8,6 +8,7 @@ tags:
 categories: 运维
 comments: 
 description: 在运维过程中的一些jenkins的使用，包括CI/CD
+cover: https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
 top_img: https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
 ---
 # Jenkins的安装
