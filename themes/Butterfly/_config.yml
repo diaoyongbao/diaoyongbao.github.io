@@ -9,7 +9,7 @@ menu:
   归档: /archives/ || fa fa-archive
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-folder-open
-  友链: /link/ || fa fa-link
+  nation: https://www.notion.so/dyb0204/e07edbfec51f4240ae8ec0e14aa46805 || fa fa-link
   关于: /about/ || fa fa-heart
   文艺||fa fa-list:
     - 音乐 || /music/ || fa fa-music
