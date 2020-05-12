@@ -1,14 +1,14 @@
----
-title: nginx泛域名解析
-date: 2019/06/28
-tags: 
-- nginx
-- https
-categories: 运维
-comments: 
-description: 由于公司业务，目前需要配置全站的https，但由于子站较多，包括各个地市站点，所以想到了nginx的泛域名解析,而且之前的nginx的配置文件全部都写到了一起，基于种种，修改了nginx的目前的配置方式
-top_img: 
----
+  ---
+  title: nginx泛域名解析
+  date: 2019/06/28
+  tags: 
+  - nginx
+  - https
+  categories: 运维
+  comments: 
+  description: 由于公司业务，目前需要配置全站的https，但由于子站较多，包括各个地市站点，所以想到了nginx的泛域名解析,而且之前的nginx的配置文件全部都写到了一起，基于种种，修改了nginx的目前的配置方式
+  top_img: 
+  ---
 
 ## nginx泛域名解析配置
 一种配置的nginx的子域名的方式是有网关的方式，就是让所有的接口请求走总站的url路径映射为子域名，如 api.jstec.com 就是由 jstec.com/api 映射而来，还有一种方式是直接由子域名访问的方式。由于之前就存在了很多的子域名，所以此处就沿用之前的子域名即可，即使用第二种的方式。
