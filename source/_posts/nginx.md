@@ -7,7 +7,7 @@ tags:
 categories: 运维
 comments:
 description: 在运维过程中nginx的一些设置的地方的记录。
-top_img:
+top_img: https://images.pexels.com/photos/1152707/pexels-photo-1152707.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
 ---
 # NGINX
 

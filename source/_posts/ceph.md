@@ -7,8 +7,8 @@ tags:
 categories: 运维
 comments: 
 description: 在k8s中经常需要使用到pvc，那么对于ceph是目前比较流行的解决方案，让我们看看它的强大吧
-cover: https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
-top_img: https://images.pexels.com/photos/814499/pexels-photo-814499.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260
+cover: https://images.pexels.com/photos/2120109/pexels-photo-2120109.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260
+top_img: https://images.pexels.com/photos/2120109/pexels-photo-2120109.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260
 ---
 
 # ceph 介绍
@@ -341,7 +341,8 @@ parameters:
 3. 测试ceph的使用
 随便建一个pvc的连接，查看是否可以成功bound，以及ceph对应的pool中是否有此image
 
-## rook-ceph简介
+
+# rook-ceph简介
 - Rook官网：https://rook.io
 - Rook是[云原生计算基金会](https://www.cncf.io/)(CNCF)的孵化级项目.
 - Rook是Kubernetes的开源**云本地存储协调**器，为各种存储解决方案提供平台，框架和支持，以便与云原生环境本地集成。
@@ -350,7 +351,7 @@ parameters:
 - 官方指导手册https://rook.io/docs/rook/v1.1/ceph-examples.html
  
 
-### 环境
+## 环境
 
 ```
 centos 7.5
@@ -375,7 +376,7 @@ kubernetes v1.12.2
 
 ---
 
-### 准备工作
+## 准备工作
 - 所有节点开启ip_forward
 
 ```
@@ -388,7 +389,7 @@ sysctl --system
 
 ```
 
-### 开始部署Operator
+## 开始部署Operator
 - 部署Rook Operator
 
 ```
@@ -413,7 +414,7 @@ kubectl -n rook-ceph-system get pod -o wide
 
 ```
 
-### 给节点打标签
+## 给节点打标签
 
 - 运行ceph-mon的节点打上：ceph-mon=enabled
 
@@ -439,7 +440,7 @@ kubectl label nodes kube-node1 ceph-mgr=enabled
 
 ---
 
-### 配置cluster.yaml文件
+## 配置cluster.yaml文件
 
 - 官方配置文件详解：https://rook.io/docs/rook/v0.8/ceph-cluster-crd.html
 
@@ -696,7 +697,7 @@ kubectl -n rook-ceph get pod -o wide
   
 ---
 
-### 配置ceph dashboard
+## 配置ceph dashboard
 
 - 看一眼dashboard在哪个service上
 
@@ -730,7 +731,7 @@ kubectl -n rook-ceph logs $MGR_POD | grep password
 
 
 
-### 配置ceph为storageclass
+## 配置ceph为storageclass
 
 - 官方给了一个样本文件：storageclass.yaml
 - 这个文件使用的是 **RBD 块存储**
@@ -915,7 +916,7 @@ lsblk
 
 
 
-### 删除一个节点
+## 删除一个节点
 - 去掉node3的标签
 
 ```
@@ -948,7 +949,7 @@ kubectl -n rook-ceph get pod -o wide
 ```
 
 
-### 常见问题
+## 常见问题
 - 官方解答：https://rook.io/docs/rook/v0.8/common-issues.html
 
 - **当机器重启之后，osd无法正常的Running，无限重启**
