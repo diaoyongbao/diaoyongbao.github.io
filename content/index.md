@@ -2,9 +2,7 @@
 title: Welcome to My Obsidian Blog
 Folder: content
 ---
-
-[Obsidian](Obsidian)
-[目录](../content )
+# 目录
 
 [[Obsidian 插件整理]]
 
