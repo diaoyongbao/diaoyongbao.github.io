@@ -21,8 +21,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.RecentNotes({ title: "Recent Notes" }),
-    Component.RecentNotes({ limit: 5 }),
+    Component.RecentNotes({ title: "最近文章" }),
+    // Component.RecentNotes({ limit: 5 }),
   ],
   right: [Component.Graph(), Component.Backlinks()],
 }
