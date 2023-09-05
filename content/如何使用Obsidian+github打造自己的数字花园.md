@@ -1,6 +1,11 @@
 ---
-"122": "13"
-Title: Obsidian 插件整理
+title: 如何使用Obsidian+github打造自己的数字花园
+draft: true
+tags: 
+ - blog
+ - obsidian 
+创建时间: 2023-09-04 17:34
+修改时间: 2023-09-05 14:55
 ---
 
 
