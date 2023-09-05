@@ -33,6 +33,8 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
+    Component.RecentNotes({ title: "Recent Notes" }),
+    Component.RecentNotes({ limit: 5 }),
   ],
   right: [],
 }
