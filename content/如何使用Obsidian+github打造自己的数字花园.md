@@ -6,13 +6,13 @@ tags:
 创建时间: 2023-09-04 17:34
 修改时间: 2023-09-05 14:55
 ---
+## Quartz 
+再根据子模块的功能添加 github 中的 obsidian-content 的内容进行结合
 
-在 obsidian 中 #插件 是十分需要的，那么有哪些什么好用的插件推荐呢？
+自动触发 merge
 
-## 美观类
+自动布局
 
+Folder and tags
 
-
-## 工具类
-
-Remotely Save 同步插件，使用 onedriver 同步挺方便。
+Recent notes
