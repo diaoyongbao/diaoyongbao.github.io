@@ -16,3 +16,5 @@ tags:
 Folder and tags
 
 Recent notes
+
+github action 自动构建
