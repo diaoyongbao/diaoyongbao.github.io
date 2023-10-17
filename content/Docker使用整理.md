@@ -7,5 +7,5 @@ tags:
 ---
 ```
 docker system prune -f 清理
-docker system df 
+docker system df  _1
 ```
