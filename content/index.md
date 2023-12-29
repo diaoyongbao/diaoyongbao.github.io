@@ -7,5 +7,5 @@ title: Home Page
 
 # 目录
 
-[[如何使用Obsidian+github打造自己的数字花园]]
-
+[如何使用Obsidian+github打造自己的数字花园](如何使用Obsidian+github打造自己的数字花园.md)
+[tvbox使用指南](tvbox使用指南.md)
